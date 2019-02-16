@@ -5,9 +5,6 @@ int verde = 10;
 int trossogiallo = 0;
 int tbiancoverde = 0;
 
-
-
-
 void setup() {
   // put your setup code here, to run once:
 pinMode(rosso,OUTPUT);
@@ -16,7 +13,6 @@ pinMode(bianco,OUTPUT);
 pinMode(verde,OUTPUT);
 TempoRossoGiallo();
 TempoBiancoVerde();
-
 
 }
 
@@ -35,12 +31,10 @@ void loop() {
 }
 
 
-
-
 void TempoRossoGiallo()
 {
   Serial.begin(9600);
-  Serial.println("Quanto durano il rosso e il giallo(in millisecodni)?");
+  Serial.println("Quanto durano il rosso e il giallo(in millisecondi)?");
   while(Serial.available()==0){};
   trossogiallo = Serial.readString().toInt();
 }
